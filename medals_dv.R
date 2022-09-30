@@ -1,0 +1,12 @@
+getwd()
+setwd("C:/Users/Raisa/Documents/jerry(DS)/datasets")
+data=read.csv("medals.csv")
+library(tidyverse)
+library(plotrix)
+c<-table(data$Sport)
+barplot(c,xlab = 'Sports',main='bar chart',col=rainbow(7))
+hist(data$Year,col='dark green')
+plot(density(data$Year),main='density plot')
+polygon(density(data$Year),col='sky blue',border = 'black')
+boxplot(data$Year)
+
